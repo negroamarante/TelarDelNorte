@@ -11,14 +11,14 @@ node {
     def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
     def CONNECTED_APP_CONSUMER_KEY=env.CONNECTED_APP_CONSUMER_KEY_DH
 
-    printf BUILD_NUMBER
-    printf RUN_ARTIFACT_DIR
-    printf SFDC_USERNAME
+    sh 'echo $BUILD_NUMBER'
+    sh 'echo $RUN_ARTIFACT_DIR'
+    sh 'echo $SFDC_USERNAME'
 
-    printf HUB_ORG
-    printf SFDC_HOST 
-    printf JWT_KEY_CRED_ID 
-    printf CONNECTED_APP_CONSUMER_KEY
+    sh 'echo $HUB_ORG'
+    sh 'echo $SFDC_HOST '
+    sh 'echo $JWT_KEY_CRED_ID '
+    sh 'echo $CONNECTED_APP_CONSUMER_KEY'
 
 
     stage('checkout source') {
