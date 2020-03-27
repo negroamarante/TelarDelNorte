@@ -2,19 +2,8 @@ pipeline {
     agent any
 
     stages {
-        stage ('Stage 1 test') {
-
-            
-        }
-
-        stage ('Testing Stage') {
-
-            
-        }
-
-
-        stage ('Deployment Stage') {
-            
+        stage('install sfdx cli and salesforcedx locally') {
+            installSfdxCli('./dx-cli', 'sfdx', env.SFDX_NPM_REGISTRY, ["salesforcedx@${properties.CLI_CHANNEL}"])
         }
     }
 }
