@@ -11,6 +11,4 @@ node {
     stage ('Set'){
         sh echo 'Hola'
     }
-
-    
 }
